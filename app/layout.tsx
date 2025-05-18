@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-
+import React from "react";
+import NavbarComponent from "@/components/navbar";
+import FooterComponent from "@/components/footer";
 import "./globals.css";
 import { ThemeModeScript } from "flowbite-react";
 
@@ -16,10 +18,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
+      <body>
+        <NavbarComponent />
         <ThemeModeScript />
-      </head>
-      <body>{children}</body>
+        {children}
+      </body>
+      <footer className="fixed bottom-0 w-full">
+        <FooterComponent />
+      </footer>
     </html>
   );
 }
