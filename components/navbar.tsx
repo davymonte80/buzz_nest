@@ -24,21 +24,22 @@ function NavbarComponent() {
       </NavbarBrand>
       <NavbarToggle />
       <NavbarCollapse>
-        <NavbarLink href="#" active>
+        <NavbarLink href="/" active>
           Home
         </NavbarLink>
-        <NavbarLink as={Link} href="#">
+
+        <NavbarLink href="/technology">Technology</NavbarLink>
+        <NavbarLink href="/gadgets">Gadgets</NavbarLink>
+        <NavbarLink href="/apps">Apps</NavbarLink>
+        <NavbarLink href="/traveling">Traveling</NavbarLink>
+        <NavbarLink href="/finance">Finance</NavbarLink>
+        <NavbarLink href="/parenting">Parenting</NavbarLink>
+        <NavbarLink href="/health">Health</NavbarLink>
+        <NavbarLink href="/food">Food</NavbarLink>
+        <NavbarLink href="/lifestyle">Lifestyle</NavbarLink>
+        <NavbarLink as={Link} href="/about">
           About
         </NavbarLink>
-        <NavbarLink href="#">Technology</NavbarLink>
-        <NavbarLink href="#">Gadgets</NavbarLink>
-        <NavbarLink href="#">Apps</NavbarLink>
-        <NavbarLink href="#">Traveling</NavbarLink>
-        <NavbarLink href="#">Finance</NavbarLink>
-        <NavbarLink href="#">Parenting</NavbarLink>
-        <NavbarLink href="#">Health</NavbarLink>
-        <NavbarLink href="#">Food</NavbarLink>
-        <NavbarLink href="#">Lifestyle</NavbarLink>
       </NavbarCollapse>
     </Navbar>
   );
