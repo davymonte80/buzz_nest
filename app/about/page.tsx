@@ -27,7 +27,10 @@ function About() {
           <p>
             Our team of dedicated writers and editors work tirelessly to bring
             you the latest updates, in-depth reviews, and practical tips to help
-            you navigate the fast-paced world around you.
+            you navigate the fast-paced world around you. We believe that
+            knowledge is power, and our mission is to empower you with the
+            information you need to make informed decisions and enhance your
+            lifestyle.
           </p>
           <p>
             Thank you for being a part of our community. We hope you enjoy
@@ -36,7 +39,7 @@ function About() {
         </div>
         <div className="mt-8 text-center">
           <span className="inline-block px-6 py-2 bg-blue-600 text-white rounded-full font-semibold shadow hover:bg-blue-700 transition">
-            Stay Curious. Stay Buzzed.
+            Stay Curious. Stay Buzzed. Stay Informed.
           </span>
         </div>
       </div>
