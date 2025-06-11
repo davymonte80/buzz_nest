@@ -1,31 +1,40 @@
+import type React from "react";
 import type { Metadata } from "next";
-import React from "react";
-import NavbarComponent from "@/components/navbar";
-import FooterComponent from "@/components/footer";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeModeScript } from "flowbite-react";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { AuthProvider } from "@/components/auth-provider";
+import { generateSEO } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Buzz Nest",
-  description:
-    "Buzz Nest is the best place to find the latest news and trends.",
-};
+const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = generateSEO();
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body>
-        <NavbarComponent />
-        <ThemeModeScript />
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <AuthProvider>
+            <div className="relative flex min-h-screen flex-col">
+              <Header />
+              <main className="flex-1">{children}</main>
+              <Footer />
+            </div>
+          </AuthProvider>
+        </ThemeProvider>
       </body>
-      <footer className="fixed bottom-0 w-full">
-        <FooterComponent />
-      </footer>
     </html>
   );
 }
